@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyledHeaderContainer, StyledHeaderSection } from './Header.styled';
-import { NavLink } from 'react-router-dom';
 
 import { StyledNavLink } from './Header.styled';
 
