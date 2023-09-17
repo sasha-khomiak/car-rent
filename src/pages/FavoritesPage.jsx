@@ -2,7 +2,7 @@ import React from 'react';
 import CarsBlock from 'components/CarsBlock/CarsBlock';
 
 const FavoritesPage = () => {
-  return <CarsBlock />;
+  return <div>favorites</div>;
 };
 
 export default FavoritesPage;
