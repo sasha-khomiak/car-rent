@@ -30,15 +30,19 @@ import DelimiterIco from '../../images/vector-line.svg';
 import { createPortal } from 'react-dom';
 const modalRoot = document.querySelector('#modal-root');
 
-const CarModal = ({ handleToggleModal, car }) => {
+const CarModal = ({ handleToggleModal, closeModal, car }) => {
   // вирахування даних для показу
   const adress = car.address.split(', ');
   const country = adress[adress.length - 1];
   const city = adress[adress.length - 2];
-  const mileage = (car.mileage / 1000).toString().split('.').join(',');
   const justRentalPrice = car.rentalPrice.slice(1, car.rentalPrice.length);
   const rentalConditions = car.rentalConditions.split('\n');
   const minAge = rentalConditions[0].split(': ');
+
+  let mileage = car.mileage.toString().split('');
+  mileage.splice(mileage.length - 3, 0, ',');
+  // const newMileage = mileage.join('');
+  // console.log('mileage', mileage);
 
   // Закриття модалки при натисканні бекдропа
   const handleBackdropClick = e => {
@@ -48,17 +52,16 @@ const CarModal = ({ handleToggleModal, car }) => {
   };
 
   // Закриття модалки при натисканні Escape
-  //   const onEscPress = e => {
-  //     console.log('e', e);
-  //     if (e.key === 'Escape') {
-  //       //       //   console.log('e', e);
-  //       //       e.preventDefault();
-  //       window.removeEventListener('keydown', onEscPress);
-  //       //   handleToggleModal();
-  //     }
-  //   };
+  const onEscPress = e => {
+    // console.log('e', e);
+    if (e.key === 'Escape') {
+      e.preventDefault();
+      window.removeEventListener('keydown', onEscPress);
+      closeModal();
+    }
+  };
 
-  //   window.addEventListener('keydown', onEscPress);
+  window.addEventListener('keydown', onEscPress);
 
   return createPortal(
     <Backdrop onClick={handleBackdropClick}>
@@ -66,10 +69,12 @@ const CarModal = ({ handleToggleModal, car }) => {
         <CloseButton onClick={handleToggleModal}>
           <CloseButtonIco src={ClBtnIco} />
         </CloseButton>
+        <div>
+          <ImageThumb>
+            <Image src={car.img} alt="car preview" />
+          </ImageThumb>
+        </div>
 
-        <ImageThumb>
-          <Image src={car.img} alt="car preview" />
-        </ImageThumb>
         <MainInfo>
           <Make>{car.make}&nbsp;</Make>
           <Model>{car.model}</Model>

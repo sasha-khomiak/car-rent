@@ -4,6 +4,9 @@ import styled from 'styled-components';
 export const CarCardContainer = styled.div`
   width: 274px;
   /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 export const ImageThumb = styled.div`

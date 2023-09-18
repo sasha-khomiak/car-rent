@@ -31,6 +31,7 @@ const CarCard = ({ car }) => {
 
   const [isOpenedModal, setIsOpenedModal] = useState(false);
 
+  // Перемикання модалки
   const handleToggleModal = () => {
     setIsOpenedModal(prevState => !prevState);
     if (isOpenedModal === true) {
@@ -41,42 +42,55 @@ const CarCard = ({ car }) => {
     }
   };
 
+  // Закриття модалки
+  const closeModal = () => {
+    setIsOpenedModal(false);
+    body.style.overflow = 'scroll';
+  };
+
   return (
     <>
       {isOpenedModal && (
-        <CarModal handleToggleModal={handleToggleModal} car={car} />
+        <CarModal
+          handleToggleModal={handleToggleModal}
+          closeModal={closeModal}
+          car={car}
+        />
       )}
       <CarCardContainer>
-        <ImageThumb>
-          <Image src={car.img} alt="Car Image" />
-          <Favorite src={FavoriteIco} />
-        </ImageThumb>
-        <MainInfo>
-          <div>
-            <Make>{car.make} </Make>
-            <Model>{car.model}</Model>
-            <Year>, {car.year}</Year>
-          </div>
-          <RentalPrice>{car.rentalPrice}</RentalPrice>
-        </MainInfo>
-        <ExtraInfo>
-          <ReviewItem>{city}</ReviewItem>
-          <Delimiter src={DelimiterIco} />
-          <ReviewItem>{country}</ReviewItem>
-          <Delimiter src={DelimiterIco} />
-          <ReviewItem>{car.rentalCompany}</ReviewItem>
-          <Delimiter src={DelimiterIco} />
-          <ReviewItem>Premium</ReviewItem>
-        </ExtraInfo>
-        <ExtraInfo>
-          <ReviewItem>{car.type}</ReviewItem>
-          <Delimiter src={DelimiterIco} />
-          <ReviewItem>{car.make}</ReviewItem>
-          <Delimiter src={DelimiterIco} />
-          <ReviewItem>{car.id}</ReviewItem>
-          <Delimiter src={DelimiterIco} />
-          <ReviewItem>Power liftgate</ReviewItem>
-        </ExtraInfo>
+        {' '}
+        <div>
+          <ImageThumb>
+            <Image src={car.img} alt="Car Image" />
+            <Favorite src={FavoriteIco} />
+          </ImageThumb>
+          <MainInfo>
+            <div>
+              <Make>{car.make} </Make>
+              <Model>{car.model}</Model>
+              <Year>, {car.year}</Year>
+            </div>
+            <RentalPrice>{car.rentalPrice}</RentalPrice>
+          </MainInfo>
+          <ExtraInfo>
+            <ReviewItem>{city}</ReviewItem>
+            <Delimiter src={DelimiterIco} />
+            <ReviewItem>{country}</ReviewItem>
+            <Delimiter src={DelimiterIco} />
+            <ReviewItem>{car.rentalCompany}</ReviewItem>
+            <Delimiter src={DelimiterIco} />
+            <ReviewItem>Premium</ReviewItem>
+          </ExtraInfo>
+          <ExtraInfo>
+            <ReviewItem>{car.type}</ReviewItem>
+            <Delimiter src={DelimiterIco} />
+            <ReviewItem>{car.make}</ReviewItem>
+            <Delimiter src={DelimiterIco} />
+            <ReviewItem>{car.id}</ReviewItem>
+            <Delimiter src={DelimiterIco} />
+            <ReviewItem>Power liftgate</ReviewItem>
+          </ExtraInfo>
+        </div>
         <ButtonLearnMore type="button" onClick={handleToggleModal}>
           Learn more
         </ButtonLearnMore>

@@ -1,4 +1,6 @@
 import CarsBlock from 'components/CarsBlock/CarsBlock';
+import FilterSidebar from 'components/FilterSidebar/FilterSidebar';
+import LoadMore from 'components/LoadMore/LoadMore';
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import carsOperations from 'redux/cars/carsOperations';
@@ -17,15 +19,9 @@ const CatalogPage = () => {
 
   return (
     <>
+      <FilterSidebar />
       <CarsBlock cars={carsForShow} />
-      {cars.length > page * 8 && (
-        <button
-          type="button"
-          onClick={() => setPage(prevState => prevState + 1)}
-        >
-          Load more
-        </button>
-      )}
+      {cars.length > page * 8 && <LoadMore setPage={setPage} />}
     </>
   );
 };

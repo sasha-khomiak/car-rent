@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledSection = styled.section`
-  /* background-color: yellow; */
-`;
+export const StyledSection = styled.section``;
 
 export const StyledContainer = styled.div`
   /*----Base mobile style 375 - 767 (адаптивний)----*/

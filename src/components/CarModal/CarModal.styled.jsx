@@ -94,9 +94,9 @@ export const CloseButtonIco = styled(ReactSVG)`
 export const ImageThumb = styled.div`
   border-radius: 14px;
   background: #f3f3f2;
-  /* overflow: hidden; */
+  overflow: hidden;
+
   margin-bottom: 14px;
-  /* display: flex; */
 
   width: 255px;
   height: 130px;
