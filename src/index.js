@@ -6,13 +6,17 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 import { store } from 'redux/store';
+// import { persistor } from 'redux/store';
+// import { PersistGate } from 'redux-persist/integration/react';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    {/* <PersistGate loading={null} persistor={persistor}> */}
     <Provider store={store}>
       <BrowserRouter basename="/car-rent">
         <App />
       </BrowserRouter>
     </Provider>
+    {/* </PersistGate> */}
   </React.StrictMode>
 );

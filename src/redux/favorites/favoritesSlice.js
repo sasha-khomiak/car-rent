@@ -1,6 +1,9 @@
 // createSlice constructor
 import { createSlice } from '@reduxjs/toolkit';
 
+import storage from 'redux-persist/lib/storage'; // defaults to localStorage for web
+import { persistReducer } from 'redux-persist';
+
 // initialState
 const initialState = { items: [] };
 
@@ -20,6 +23,18 @@ const favoritesSlice = createSlice({
   },
 });
 
+// конфігурація persist
+const persistConfig = {
+  key: 'favorites',
+  storage,
+};
+
+// пропускаємо редʼюсер через персіст
+export const persistedFavoritesReducer = persistReducer(
+  persistConfig,
+  favoritesSlice.reducer
+);
+
 export const { toggleFavorite } = favoritesSlice.actions;
 
-export const favoritesReducer = favoritesSlice.reducer;
+// export const favoritesReducer = favoritesSlice.reducer;

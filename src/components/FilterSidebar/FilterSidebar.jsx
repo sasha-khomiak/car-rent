@@ -7,7 +7,7 @@ import {
   MenuItem,
   Box,
   TextField,
-  Label,
+  // Label,
   FormHelperText,
 } from '@mui/material';
 
@@ -17,7 +17,17 @@ import {
   Button,
 } from './FilterSidebar.styled';
 
-const FilterSidebar = ({ setSelectedBrand }) => {
+const FilterSidebar = ({
+  setSelectedBrand,
+  selectedBrand,
+  setPrice,
+  price,
+  setFrom,
+  from,
+  setTo,
+  to,
+  handleFilter,
+}) => {
   return (
     <StyledFilterBlock>
       <StyledFilterContainer>
@@ -26,11 +36,9 @@ const FilterSidebar = ({ setSelectedBrand }) => {
           <Select
             labelId="car-brand-label"
             id="car-brand"
-            // value={age}
+            value={selectedBrand}
             label="Car brand"
-            onChange={e =>
-              console.log('e.currentTarget', e.currentTarget.value)
-            }
+            onChange={e => setSelectedBrand(e.target.value)}
           >
             <MenuItem value="">Enter the text</MenuItem>
             <MenuItem value={'Buick'}>Buick</MenuItem>
@@ -63,9 +71,9 @@ const FilterSidebar = ({ setSelectedBrand }) => {
           <Select
             labelId="price-label"
             id="price"
-            // value={price}
+            value={price}
             label="Price/1hour"
-            // onChange={e => setPrice(e.target.value)}
+            onChange={e => setPrice(e.target.value)}
           >
             <MenuItem value="">To $</MenuItem>
             <MenuItem value={30}>30</MenuItem>
@@ -87,6 +95,8 @@ const FilterSidebar = ({ setSelectedBrand }) => {
             label="From"
             variant="outlined"
             helperText="Сar mileage / km"
+            value={from}
+            onChange={e => setFrom(e.target.value)}
           />
           <TextField
             sx={{
@@ -95,9 +105,13 @@ const FilterSidebar = ({ setSelectedBrand }) => {
             id="outlined-basic"
             label="To"
             variant="outlined"
+            value={to}
+            onChange={e => setTo(e.target.value)}
           />
         </Box>
-        <Button type="submit">Search</Button>
+        <Button type="button" onClick={handleFilter}>
+          Search
+        </Button>
       </StyledFilterContainer>
     </StyledFilterBlock>
   );
