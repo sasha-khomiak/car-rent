@@ -16,19 +16,29 @@ import {
   ButtonLearnMore,
 } from './CarCard.styled';
 
-// import CarImage from '../../images/aMsrBLBrO.jpg';
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleFavorite } from 'redux/favorites/favoritesSlice';
+
 import DelimiterIco from '../../images/vector-line.svg';
 import FavoriteIco from '../../images/favorive.svg';
-// import FavoriteActiveIco from '../../images/favorive-active.svg';
+import FavoriteActiveIco from '../../images/favorive-active.svg';
+
 import CarModal from 'components/CarModal/CarModal';
 
 const body = document.querySelector('body');
 
+// component
 const CarCard = ({ car }) => {
+  // vars for layout
   const adress = car.address.split(', ');
   const country = adress[adress.length - 1];
   const city = adress[adress.length - 2];
 
+  // dispatch and favs
+  const dispatch = useDispatch();
+  const favorites = useSelector(state => state.favorites.items);
+
+  // state of modal
   const [isOpenedModal, setIsOpenedModal] = useState(false);
 
   // Перемикання модалки
@@ -50,6 +60,7 @@ const CarCard = ({ car }) => {
 
   return (
     <>
+      {/* показ модалки за умовою */}
       {isOpenedModal && (
         <CarModal
           handleToggleModal={handleToggleModal}
@@ -58,11 +69,23 @@ const CarCard = ({ car }) => {
         />
       )}
       <CarCardContainer>
-        {' '}
         <div>
           <ImageThumb>
             <Image src={car.img} alt="Car Image" />
-            <Favorite src={FavoriteIco} />
+            {/* показ серця не залитого за умовою */}
+            {!favorites.includes(car.id) && (
+              <Favorite
+                src={FavoriteIco}
+                onClick={() => dispatch(toggleFavorite(car.id))}
+              />
+            )}
+            {/* показ серця залитого за умовою */}
+            {favorites.includes(car.id) && (
+              <Favorite
+                src={FavoriteActiveIco}
+                onClick={() => dispatch(toggleFavorite(car.id))}
+              />
+            )}
           </ImageThumb>
           <MainInfo>
             <div>
