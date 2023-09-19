@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-export const StyledFooterSection = styled.div`
-  background-color: #3470ff;
+export const StyledSection = styled.div`
+  /* background-color: #3470ff; */
 `;
 
-export const StyledFooterContainer = styled.div`
+export const StyledContainer = styled.div`
   /*----Base mobile style 375 - 767 (адаптивний)----*/
   /* outline: 2px solid tomato; */
   margin: 0 auto;
@@ -14,7 +14,8 @@ export const StyledFooterContainer = styled.div`
   padding: 20px 50px;
 
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   gap: 20px;
 
   /*----Tablet style 768-1440 (adaptive) ----*/
@@ -31,12 +32,17 @@ export const StyledFooterContainer = styled.div`
   }
 `;
 
-export const CopyLink = styled.a`
-  text-align: center;
-  text-decoration: none;
-  color: white;
+export const Message = styled.p`
+  color: #3470ff;
+  font-family: Manrope;
+  font-size: 25px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 24px;
 
-  &:hover {
-    text-decoration: underline;
-  }
+  text-align: center;
+`;
+
+export const Image = styled.img`
+  max-width: 100%;
 `;

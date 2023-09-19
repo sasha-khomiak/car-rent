@@ -1,6 +1,7 @@
 import CarsBlock from 'components/CarsBlock/CarsBlock';
 import FilterSidebar from 'components/FilterSidebar/FilterSidebar';
 import LoadMore from 'components/LoadMore/LoadMore';
+import NoSearchingResults from 'components/NoSearchingResults/NoSearchingResults';
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import carsOperations from 'redux/cars/carsOperations';
@@ -23,7 +24,11 @@ const CatalogPage = () => {
   const [to, setTo] = useState('');
 
   // filtered cars
-  const [filteredCars, setFilteredCars] = useState(cars);
+  const [filteredCars, setFilteredCars] = useState([]);
+
+  useEffect(() => {
+    setFilteredCars(cars);
+  }, [cars]);
 
   const handleFilter = () => {
     setPage(1);
@@ -49,20 +54,12 @@ const CatalogPage = () => {
 
     //перевірка по мінімальному пробігу
     if (from !== '') {
-      tempCars = tempCars.filter(item => {
-        if (from <= item.mileage) {
-          return item;
-        }
-      });
+      tempCars = tempCars.filter(item => from <= item.mileage);
     }
 
     //перевірка по максимальному пробігу
     if (to !== '') {
-      tempCars = tempCars.filter(item => {
-        if (to >= item.mileage) {
-          return item;
-        }
-      });
+      tempCars = tempCars.filter(item => to >= item.mileage);
     }
 
     setFilteredCars(tempCars);
@@ -70,21 +67,10 @@ const CatalogPage = () => {
 
   // cars for layout
   let carsForShow = [];
-  // if (
-  //   selectedBrand === '' &&
-  //   price === '' &&
-  //   from === '' &&
-  //   to === '' &&
-  //   page === 1
-  // ) {
-  //   carsForShow = filteredCars.filter(
-  //     (element, index, array) => index < page * 8
-  //   );
-  // } else {
+
   carsForShow = filteredCars.filter(
     (element, index, array) => index < page * 8
   );
-  // }
 
   return (
     <>
@@ -100,7 +86,7 @@ const CatalogPage = () => {
         handleFilter={handleFilter}
       />
       <CarsBlock cars={carsForShow} />
-      {carsForShow.length === 0 && <p>there is no results</p>}
+      {carsForShow.length === 0 && <NoSearchingResults />}
       {filteredCars.length > page * 8 && <LoadMore setPage={setPage} />}
     </>
   );

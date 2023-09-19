@@ -82,15 +82,20 @@ const FilterSidebar = ({
             <MenuItem value={60}>60</MenuItem>
             <MenuItem value={70}>70</MenuItem>
             <MenuItem value={80}>80</MenuItem>
+            <MenuItem value={90}>90</MenuItem>
+            <MenuItem value={100}>100</MenuItem>
+            <MenuItem value={150}>150</MenuItem>
+            <MenuItem value={200}>200</MenuItem>
+            <MenuItem value={300}>300</MenuItem>
+            <MenuItem value={400}>400</MenuItem>
+            <MenuItem value={500}>500</MenuItem>
           </Select>
           <FormHelperText>Price</FormHelperText>
         </FormControl>
 
         <Box component="form" noValidate autoComplete="off">
           <TextField
-            sx={{
-              width: 150,
-            }}
+            sx={{ m: 1, width: 150 }}
             id="outlined-basic"
             label="From"
             variant="outlined"
@@ -100,6 +105,7 @@ const FilterSidebar = ({
           />
           <TextField
             sx={{
+              m: 1,
               width: 150,
             }}
             id="outlined-basic"
