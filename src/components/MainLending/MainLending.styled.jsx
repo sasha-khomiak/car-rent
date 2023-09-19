@@ -53,6 +53,8 @@ export const Hero = styled.div`
 `;
 
 export const HeroText = styled.h1`
+  /* position: absolute; */
+  /* z-index: 2000; */
   color: white;
   font-size: 40px;
   text-shadow: 4px 4px #0b44cd;
@@ -102,6 +104,10 @@ export const HeroText = styled.h1`
 `;
 
 export const HeroButton = styled.a`
+  /* position: absolute; */
+  /* z-index: 2000; */
+  /* transform: translateY(70px); */
+
   display: flex;
   padding: 12px 50px;
   justify-content: center;
@@ -143,11 +149,17 @@ export const BlockServises = styled.div`
 export const ServiceItem = styled.div`
   height: 200px;
   width: 100%;
-  background-color: red;
+  background-color: #0b44cd;
   border-radius: 24px;
   overflow: hidden;
 
   position: relative;
+
+  transition: transform 250ms linear;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 
   @media screen and (min-width: 768px) {
     width: calc((100% - 20px) / 2);

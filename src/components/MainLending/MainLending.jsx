@@ -38,6 +38,17 @@ import CarImg2 from '../../images/car2.jpg';
 import CarImg3 from '../../images/car3.jpg';
 import CarImg4 from '../../images/car4.jpg';
 
+import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
+// https://github.com/leandrowd/react-responsive-carousel
+import CarCarosel1 from '../../images/car-carosel1.jpg';
+import CarCarosel2 from '../../images/car-carosel2.jpg';
+import CarCarosel3 from '../../images/car-carosel3.jpg';
+import CarCarosel4 from '../../images/car-carosel4.jpg';
+import CarCarosel5 from '../../images/car-carosel5.jpg';
+import CarCarosel6 from '../../images/car-carosel6.jpg';
+import CarCarosel7 from '../../images/car-carosel7.jpg';
+
 const MainLending = () => {
   return (
     <>
@@ -46,9 +57,8 @@ const MainLending = () => {
           <Container>
             <Hero>
               <HeroText>The best car rent</HeroText>
-              <div>
-                <HeroButton href="tel:+380730000000">Rent Car Now</HeroButton>
-              </div>
+
+              <HeroButton href="tel:+380730000000">Rent Car Now</HeroButton>
             </Hero>
             <Title>Best servise</Title>
             <BlockServises>
@@ -121,6 +131,37 @@ const MainLending = () => {
                 <StyledLogo src={ToyotaSVG} />
               </LogoThumb>
             </BlockLogos>
+
+            <Title>Gallery</Title>
+
+            <Carousel
+              showArrows={true}
+              autoPlay={true}
+              interval={3000}
+              infiniteLoop={true}
+            >
+              <div>
+                <img src={CarCarosel1} />
+              </div>
+              <div>
+                <img src={CarCarosel2} />
+              </div>
+              <div>
+                <img src={CarCarosel3} />
+              </div>
+              <div>
+                <img src={CarCarosel4} />
+              </div>
+              <div>
+                <img src={CarCarosel5} />
+              </div>
+              <div>
+                <img src={CarCarosel6} />
+              </div>
+              <div>
+                <img src={CarCarosel7} />
+              </div>
+            </Carousel>
           </Container>
         </SectionHero>
       </main>
