@@ -141,25 +141,25 @@ const MainLending = () => {
               infiniteLoop={true}
             >
               <div>
-                <img src={CarCarosel1} />
+                <img src={CarCarosel1} alt="car image 1" />
               </div>
               <div>
-                <img src={CarCarosel2} />
+                <img src={CarCarosel2} alt="car image 2" />
               </div>
               <div>
-                <img src={CarCarosel3} />
+                <img src={CarCarosel3} alt="car image 3" />
               </div>
               <div>
-                <img src={CarCarosel4} />
+                <img src={CarCarosel4} alt="car image 4" />
               </div>
               <div>
-                <img src={CarCarosel5} />
+                <img src={CarCarosel5} alt="car image 5" />
               </div>
               <div>
-                <img src={CarCarosel6} />
+                <img src={CarCarosel6} alt="car image 6" />
               </div>
               <div>
-                <img src={CarCarosel7} />
+                <img src={CarCarosel7} alt="car image 7" />
               </div>
             </Carousel>
           </Container>
