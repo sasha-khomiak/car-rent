@@ -39,17 +39,36 @@ const CatalogPage = () => {
         item => item.make.toLowerCase() === selectedBrand.toLowerCase()
       );
     }
+    //перевірка по ціні некоректна
+    // if (price !== '') {
+    //   tempCars = tempCars.filter(item => {
+    //     const justRentalPrice = item.rentalPrice.slice(
+    //       1,
+    //       item.rentalPrice.length
+    //     );
+    //     if (justRentalPrice <= price) {
+    //       return item;
+    //     }
+    //   });
+    // }
+
     //перевірка по ціні
     if (price !== '') {
-      tempCars = tempCars.filter(item => {
-        const justRentalPrice = item.rentalPrice.slice(
+      const array = [...tempCars];
+      console.log('array', array);
+      tempCars = [...[]];
+      console.log('tempCars', tempCars);
+
+      for (let car of array) {
+        const justRentalPrice = car.rentalPrice.slice(
           1,
-          item.rentalPrice.length
+          car.rentalPrice.length
         );
+
         if (justRentalPrice <= price) {
-          return item;
+          tempCars.push(car);
         }
-      });
+      }
     }
 
     //перевірка по мінімальному пробігу
