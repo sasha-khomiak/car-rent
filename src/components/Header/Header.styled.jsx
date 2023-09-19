@@ -16,7 +16,8 @@ export const StyledHeaderContainer = styled.div`
   padding: 20px 50px;
 
   display: flex;
-  gap: 20px;
+  justify-content: space-between;
+  /* gap: 20px; */
 
   /*----Tablet style 768-1440 (adaptive) ----*/
   @media screen and (min-width: 768px) {
@@ -32,6 +33,49 @@ export const StyledHeaderContainer = styled.div`
   }
 `;
 
+export const HeaderLeft = styled.div`
+  display: flex;
+`;
+
+export const LogoImg = styled.img`
+  height: 30px;
+
+  animation: wiggle 3s linear infinite;
+
+  // кі фрейм для руху нашого логотипа
+  @keyframes wiggle {
+    0%,
+    7% {
+      transform: rotateZ(0);
+    }
+
+    15% {
+      transform: rotateZ(-15deg);
+    }
+
+    20% {
+      transform: rotateZ(10deg);
+    }
+
+    25% {
+      transform: rotateZ(-10deg);
+    }
+
+    30% {
+      transform: rotateZ(6deg);
+    }
+
+    35% {
+      transform: rotateZ(-4deg);
+    }
+
+    40%,
+    100% {
+      transform: rotateZ(0);
+    }
+  }
+`;
+
 export const StyledNavLink = styled(NavLink)`
   font-family: Manrope;
   font-size: 20px;
@@ -40,6 +84,7 @@ export const StyledNavLink = styled(NavLink)`
   line-height: 1.42857;
   text-decoration: none;
   color: #ffffff;
+  margin-left: 10px;
 
   transition: transform 250ms linear;
 

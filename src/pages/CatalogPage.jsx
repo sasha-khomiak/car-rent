@@ -55,9 +55,7 @@ const CatalogPage = () => {
     //перевірка по ціні
     if (price !== '') {
       const array = [...tempCars];
-      console.log('array', array);
       tempCars = [...[]];
-      console.log('tempCars', tempCars);
 
       for (let car of array) {
         const justRentalPrice = car.rentalPrice.slice(
