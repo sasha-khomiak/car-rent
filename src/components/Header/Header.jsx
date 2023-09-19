@@ -3,7 +3,7 @@ import { StyledHeaderContainer, StyledHeaderSection } from './Header.styled';
 
 import { HeaderLeft, StyledNavLink, LogoImg } from './Header.styled';
 
-import LogoCar from '../../images/icon-car-yellow.jpg';
+import LogoCar from '../../images/icon-car-yellow.png';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
