@@ -7,6 +7,10 @@ import {
   HeroText,
   HeroButton,
   Title,
+  BlockServises,
+  ServiceItem,
+  ServiceItemImage,
+  ServiceItemText,
   BlockLogos,
   LogoThumb,
   StyledLogo,
@@ -29,6 +33,11 @@ import VolvoSVG from '../../images/car-logos/volvo-logo-2021.svg';
 import LamborghiniSVG from '../../images/car-logos/lamborghini-3.svg';
 import ToyotaSVG from '../../images/car-logos/toyota-center.svg';
 
+import CarImg1 from '../../images/car1.jpg';
+import CarImg2 from '../../images/car2.jpg';
+import CarImg3 from '../../images/car3.jpg';
+import CarImg4 from '../../images/car4.jpg';
+
 const MainLending = () => {
   return (
     <>
@@ -41,6 +50,26 @@ const MainLending = () => {
                 <HeroButton href="tel:+380730000000">Rent Car Now</HeroButton>
               </div>
             </Hero>
+            <Title>Best servise</Title>
+            <BlockServises>
+              <ServiceItem>
+                <ServiceItemImage src={CarImg1} />
+                <ServiceItemText>Over 100 cars</ServiceItemText>
+              </ServiceItem>
+              <ServiceItem>
+                <ServiceItemImage src={CarImg2} />
+                <ServiceItemText>2000+ satisfied customers</ServiceItemText>
+              </ServiceItem>
+              <ServiceItem>
+                <ServiceItemImage src={CarImg3} />
+                <ServiceItemText>400k rent hours</ServiceItemText>
+              </ServiceItem>
+              <ServiceItem>
+                <ServiceItemImage src={CarImg4} />
+                <ServiceItemText>20 years experience</ServiceItemText>
+              </ServiceItem>
+            </BlockServises>
+
             <Title>All popular brands</Title>
             <BlockLogos>
               <LogoThumb>
@@ -92,8 +121,6 @@ const MainLending = () => {
                 <StyledLogo src={ToyotaSVG} />
               </LogoThumb>
             </BlockLogos>
-
-            <Title>Best servise</Title>
           </Container>
         </SectionHero>
       </main>

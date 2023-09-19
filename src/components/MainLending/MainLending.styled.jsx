@@ -127,7 +127,56 @@ export const HeroButton = styled.a`
   }
 `;
 
-export const Title = styled.h2``;
+export const Title = styled.h2`
+  color: #0b44cd;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+`;
+
+export const BlockServises = styled.div`
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+`;
+
+export const ServiceItem = styled.div`
+  height: 200px;
+  width: 100%;
+  background-color: red;
+  border-radius: 24px;
+  overflow: hidden;
+
+  position: relative;
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 20px) / 2);
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: calc((100% - 60px) / 4);
+  }
+`;
+
+export const ServiceItemImage = styled.img`
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+`;
+
+export const ServiceItemText = styled.p`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+
+  text-shadow: 4px 4px black;
+`;
 
 export const BlockLogos = styled.div`
   display: flex;
@@ -137,7 +186,7 @@ export const BlockLogos = styled.div`
 
 export const LogoThumb = styled.div`
   /* background-color: red; */
-  width: 149px;
+  width: calc((100% - 20px) / 2);
   padding: 10px;
   height: 80px;
   display: flex;
