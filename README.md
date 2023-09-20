@@ -73,3 +73,12 @@ This project is developed with
 6. Pull your changes to GitHub
 7. For deploying, you can use gh-pages.
 8. To start your project, use the command: `npm start`
+
+## Backend
+
+For backend, we can use UI-service https://mockapi.io/. Create advert в Mockapi
+with the next fields: id, year, make, model, type, img, description,
+fuelConsumption, engineSize, accessories, functionalities, rentalPrice,
+rentalCompany, address, rentalConditions, mileage.
+
+![Mockapi1](./assets/Mockapi1.png) ![Mockapi2](./assets/Mockapi2.png)
