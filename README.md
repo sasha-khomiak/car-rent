@@ -27,6 +27,33 @@ Layout changes on width 768px 1440px.
 
 ![Desktop Catalog Page](./assets/desktop-catalog.png)
 
+## Functionality
+
+On all pages there is Header and Footer for Navigation on website and
+information about developer on any page.
+
+On the main page there is Hero Section with the button for call to Car Rent
+service, main benefits about company, popular car logos and gallery with our
+cars.
+
+On the catalog page there is list of cars for rent with pagination. For loading
+more cars just press "Load more". If there is no more cars this button is
+hidden. On the top of this page is a filter search by car mark, price and
+milliage. You can choose any filter combination. If one filter is not filled it
+just ignored. For new search just change request and click "Search" again.
+
+You can add or remove car to/from your favorite list - just click on heart icon.
+
+![Desktop Catalog Page](./assets/favorite.png)
+
+If you press "Learn more" button there is enable modal window about car
+characteristics. For closing this modal window - just click cross button,
+backdop or Escape key on keyboard.
+
+![Desktop Catalog Page](./assets/modal-window.png)
+
+# For Developers
+
 ![Creating repo from a template step 2](https://www.youtube.com/watch?v=0VKAIe0sths)
 
 Этот проект был создан при помощи
