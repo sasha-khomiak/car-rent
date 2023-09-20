@@ -1,17 +1,18 @@
 {
   "files": {
     "main.css": "/car-rent/static/css/main.0e2de7d5.css",
-    "main.js": "/car-rent/static/js/main.fdaf9b09.js",
+    "main.js": "/car-rent/static/js/main.97ccb276.js",
     "static/css/543.90e4485c.chunk.css": "/car-rent/static/css/543.90e4485c.chunk.css",
     "static/js/543.0e02e47b.chunk.js": "/car-rent/static/js/543.0e02e47b.chunk.js",
-    "static/js/927.31d2bb35.chunk.js": "/car-rent/static/js/927.31d2bb35.chunk.js",
-    "static/js/61.6a12bb4f.chunk.js": "/car-rent/static/js/61.6a12bb4f.chunk.js",
+    "static/js/927.7ed5c063.chunk.js": "/car-rent/static/js/927.7ed5c063.chunk.js",
+    "static/js/61.49ede9a2.chunk.js": "/car-rent/static/js/61.49ede9a2.chunk.js",
     "static/js/234.9ff6febc.chunk.js": "/car-rent/static/js/234.9ff6febc.chunk.js",
     "static/js/847.05394f4b.chunk.js": "/car-rent/static/js/847.05394f4b.chunk.js",
     "static/js/80.2096a1a8.chunk.js": "/car-rent/static/js/80.2096a1a8.chunk.js",
-    "static/js/712.a7165b26.chunk.js": "/car-rent/static/js/712.a7165b26.chunk.js",
+    "static/js/307.1ea44bbe.chunk.js": "/car-rent/static/js/307.1ea44bbe.chunk.js",
+    "static/js/712.3d1dc5fd.chunk.js": "/car-rent/static/js/712.3d1dc5fd.chunk.js",
     "static/js/896.baedb5dd.chunk.js": "/car-rent/static/js/896.baedb5dd.chunk.js",
-    "static/js/611.dc8d7390.chunk.js": "/car-rent/static/js/611.dc8d7390.chunk.js",
+    "static/js/872.aee772ca.chunk.js": "/car-rent/static/js/872.aee772ca.chunk.js",
     "static/media/car1.jpg": "/car-rent/static/media/car1.a1b8cfcf60011ec1f482.jpg",
     "static/media/NoResults.gif": "/car-rent/static/media/NoResults.be0aed6afe71516454df.gif",
     "static/media/car-carosel1.jpg": "/car-rent/static/media/car-carosel1.3006c9412b80e45f1b40.jpg",
@@ -38,8 +39,8 @@
     "static/media/bmw-791.svg": "/car-rent/static/media/bmw-791.fdc33fe8cf0293a771cfcc14ab4510c5.svg",
     "static/media/lexus.svg": "/car-rent/static/media/lexus.38d8018f44d92caca3bd96fa588f0e0f.svg",
     "static/media/nissan-2020-logo.svg": "/car-rent/static/media/nissan-2020-logo.e491cedb69221fd3cf0235baa0cf0677.svg",
-    "static/media/volvo-logo-2021.svg": "/car-rent/static/media/volvo-logo-2021.b8ff476d513d53de7702b423a42731fb.svg",
     "index.html": "/car-rent/index.html",
+    "static/media/volvo-logo-2021.svg": "/car-rent/static/media/volvo-logo-2021.b8ff476d513d53de7702b423a42731fb.svg",
     "static/media/volkswagen-1.svg": "/car-rent/static/media/volkswagen-1.306e074576811703227dc0132da3b981.svg",
     "static/media/infiniti-1.svg": "/car-rent/static/media/infiniti-1.fd492bb9c65ac0692b89abff77f7df68.svg",
     "static/media/favorive.svg": "/car-rent/static/media/favorive.282d936f414f4c6884ab9306a91dad67.svg",
@@ -49,20 +50,21 @@
     "static/media/x.svg": "/car-rent/static/media/x.a9dc008d54cf388a1fcda5679d999596.svg",
     "static/media/vector-line.svg": "/car-rent/static/media/vector-line.5dbce068a4e015f477e063ada8f4b6d7.svg",
     "main.0e2de7d5.css.map": "/car-rent/static/css/main.0e2de7d5.css.map",
-    "main.fdaf9b09.js.map": "/car-rent/static/js/main.fdaf9b09.js.map",
+    "main.97ccb276.js.map": "/car-rent/static/js/main.97ccb276.js.map",
     "543.90e4485c.chunk.css.map": "/car-rent/static/css/543.90e4485c.chunk.css.map",
     "543.0e02e47b.chunk.js.map": "/car-rent/static/js/543.0e02e47b.chunk.js.map",
-    "927.31d2bb35.chunk.js.map": "/car-rent/static/js/927.31d2bb35.chunk.js.map",
-    "61.6a12bb4f.chunk.js.map": "/car-rent/static/js/61.6a12bb4f.chunk.js.map",
+    "927.7ed5c063.chunk.js.map": "/car-rent/static/js/927.7ed5c063.chunk.js.map",
+    "61.49ede9a2.chunk.js.map": "/car-rent/static/js/61.49ede9a2.chunk.js.map",
     "234.9ff6febc.chunk.js.map": "/car-rent/static/js/234.9ff6febc.chunk.js.map",
     "847.05394f4b.chunk.js.map": "/car-rent/static/js/847.05394f4b.chunk.js.map",
     "80.2096a1a8.chunk.js.map": "/car-rent/static/js/80.2096a1a8.chunk.js.map",
-    "712.a7165b26.chunk.js.map": "/car-rent/static/js/712.a7165b26.chunk.js.map",
+    "307.1ea44bbe.chunk.js.map": "/car-rent/static/js/307.1ea44bbe.chunk.js.map",
+    "712.3d1dc5fd.chunk.js.map": "/car-rent/static/js/712.3d1dc5fd.chunk.js.map",
     "896.baedb5dd.chunk.js.map": "/car-rent/static/js/896.baedb5dd.chunk.js.map",
-    "611.dc8d7390.chunk.js.map": "/car-rent/static/js/611.dc8d7390.chunk.js.map"
+    "872.aee772ca.chunk.js.map": "/car-rent/static/js/872.aee772ca.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0e2de7d5.css",
-    "static/js/main.fdaf9b09.js"
+    "static/js/main.97ccb276.js"
   ]
 }
