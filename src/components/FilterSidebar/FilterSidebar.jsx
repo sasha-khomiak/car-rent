@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import {
   InputLabel,
@@ -28,6 +28,29 @@ const FilterSidebar = ({
   to,
   handleFilter,
 }) => {
+  const [formatedTo, setFormatedTo] = useState('');
+  const [formatedFrom, setFormatedFrom] = useState('');
+
+  const onChangeTo = e => {
+    const temtTo = e.target.value.replaceAll(',', '');
+    setTo(temtTo);
+    let tempFormatedTo = new Intl.NumberFormat('en-US').format(temtTo);
+    if (tempFormatedTo === '0') {
+      tempFormatedTo = '';
+    }
+    setFormatedTo(tempFormatedTo);
+  };
+
+  const onChangeFrom = e => {
+    const temtFrom = e.target.value.replaceAll(',', '');
+    setFrom(temtFrom);
+    let tempFormatedFrom = new Intl.NumberFormat('en-US').format(temtFrom);
+    if (tempFormatedFrom === '0') {
+      tempFormatedFrom = '';
+    }
+    setFormatedFrom(tempFormatedFrom);
+  };
+
   return (
     <StyledFilterBlock>
       <StyledFilterContainer>
@@ -100,8 +123,8 @@ const FilterSidebar = ({
             label="From"
             variant="outlined"
             helperText="Сar mileage / km"
-            value={from}
-            onChange={e => setFrom(e.target.value)}
+            value={formatedFrom}
+            onChange={onChangeFrom}
           />
           <TextField
             sx={{
@@ -111,8 +134,8 @@ const FilterSidebar = ({
             id="outlined-basic"
             label="To"
             variant="outlined"
-            value={to}
-            onChange={e => setTo(e.target.value)}
+            value={formatedTo}
+            onChange={onChangeTo}
           />
         </Box>
         <Button type="button" onClick={handleFilter}>
