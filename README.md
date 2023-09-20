@@ -68,7 +68,7 @@ This project is developed with
 3. Clone the project to your computer
 4. Install all dependencies with: `npm i`
 5. Change project name and username in package.json in fields "name" and
-   "homepage". 6. in index.js write the correct basename="/car-rent" of your
+   "homepage" 6. in index.js write the correct basename="/car-rent" of your
    project with /
 6. Pull your changes to GitHub
 7. For deploying, you can use gh-pages.
