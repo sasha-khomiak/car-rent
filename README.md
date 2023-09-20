@@ -1,6 +1,17 @@
 # Car Rent Service App
 
-This is website with landing page about servises
+This is website for Car Rent Services. It consists of:
+
+- Main landing page about servises
+- Catalog page where user can choose cars
+- Favorites page with list of favorite cars.
+
+# Layout
+
+Layout of this Application is adaptive for mobile, tablet and desktop devises.
+Layout changes on width 768px 1440px.
+
+![Desktop Main Page](./assets/desktop-main.png)
 
 ![Creating repo from a template step 2](https://www.youtube.com/watch?v=0VKAIe0sths)
 
