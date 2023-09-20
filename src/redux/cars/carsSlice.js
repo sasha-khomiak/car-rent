@@ -13,22 +13,17 @@ const carsSlice = createSlice({
   initialState,
   extraReducers: builder => {
     builder
+      // Pending Cars
       .addCase(carsOperations.fetchCars.pending, state => {
-        // state.isFetchingCurrentUser = true;
         state.showLoader = true;
       })
-      //set Current User fulfilled
+      // fulfilled Cars
       .addCase(carsOperations.fetchCars.fulfilled, (state, action) => {
-        // console.log('action', action);
         state.items = action.payload;
         state.showLoader = false;
-        // console.log('state.items', state.items);
-        // state.isLoggedIn = true;
-        // state.isFetchingCurrentUser = false;
       })
-      //set Current User rejected
+      // rejected cars
       .addCase(carsOperations.fetchCars.rejected, state => {
-        // state.isFetchingCurrentUser = false;
         state.showLoader = false;
       });
   },

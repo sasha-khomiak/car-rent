@@ -42,18 +42,6 @@ const CatalogPage = () => {
         item => item.make.toLowerCase() === selectedBrand.toLowerCase()
       );
     }
-    //перевірка по ціні некоректна
-    // if (price !== '') {
-    //   tempCars = tempCars.filter(item => {
-    //     const justRentalPrice = item.rentalPrice.slice(
-    //       1,
-    //       item.rentalPrice.length
-    //     );
-    //     if (justRentalPrice <= price) {
-    //       return item;
-    //     }
-    //   });
-    // }
 
     //перевірка по ціні
     if (price !== '') {
