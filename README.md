@@ -2,7 +2,7 @@
 
 This is website with landing page about servises
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0VKAIe0sths?si=E8VpFkePvo1EmPjw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+![Creating repo from a template step 2](https://www.youtube.com/watch?v=0VKAIe0sths)
 
 Этот проект был создан при помощи
 [Create React App](https://github.com/facebook/create-react-app). Для знакомства
