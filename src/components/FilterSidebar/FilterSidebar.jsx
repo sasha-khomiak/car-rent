@@ -7,7 +7,6 @@ import {
   MenuItem,
   Box,
   TextField,
-  // Label,
   FormHelperText,
 } from '@mui/material';
 
@@ -16,6 +15,8 @@ import {
   StyledFilterContainer,
   Button,
 } from './FilterSidebar.styled';
+
+import brands from './listOfBrands.json';
 
 const FilterSidebar = ({
   setSelectedBrand,
@@ -64,27 +65,11 @@ const FilterSidebar = ({
             onChange={e => setSelectedBrand(e.target.value)}
           >
             <MenuItem value="">Enter the text</MenuItem>
-            <MenuItem value={'Buick'}>Buick</MenuItem>
-            <MenuItem value={'Volvo'}>Volvo</MenuItem>
-            <MenuItem value={'HUMMER'}>HUMMER</MenuItem>
-            <MenuItem value={'Subaru'}>Subaru</MenuItem>
-            <MenuItem value={'Mitsubishi'}>Mitsubishi</MenuItem>
-            <MenuItem value={'Nissan'}>Nissan</MenuItem>
-            <MenuItem value={'Lincoln'}>Lincoln</MenuItem>
-            <MenuItem value={'GMC'}>GMC</MenuItem>
-            <MenuItem value={'Hyundai'}>Hyundai</MenuItem>
-            <MenuItem value={'MINI'}>MINI</MenuItem>
-            <MenuItem value={'Bentley'}>Bentley</MenuItem>
-            <MenuItem value={'Mercedes-Benz'}>Mercedes-Benz</MenuItem>
-            <MenuItem value={'Aston Martin'}>Aston Martin</MenuItem>
-            <MenuItem value={'Pontiac'}>Pontiac</MenuItem>
-            <MenuItem value={'Lamborghini'}>Lamborghini</MenuItem>
-            <MenuItem value={'Audi'}>Audi</MenuItem>
-            <MenuItem value={'BMW'}>BMW</MenuItem>
-            <MenuItem value={'Chevrolet'}>Chevrolet</MenuItem>
-            <MenuItem value={'Chrysler'}>Chrysler</MenuItem>
-            <MenuItem value={'Kia'}>Kia</MenuItem>
-            <MenuItem value={'Land'}>Land</MenuItem>
+            {brands.map(brand => (
+              <MenuItem key={brand} value={brand}>
+                {brand}
+              </MenuItem>
+            ))}
           </Select>
           <FormHelperText>Brand</FormHelperText>
         </FormControl>
