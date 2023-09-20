@@ -11,13 +11,21 @@ This is website for Car Rent Services. It consists of:
 Layout of this Application is adaptive for mobile, tablet and desktop devises.
 Layout changes on width 768px 1440px.
 
+## Mobile Main and Catalog Page
+
+![Mobile Main and Catalog Page](./assets/mobile.png)
+
+## Tablet Main and Catalog Page
+
+![Tablet Main and Catalog Page](./assets/tablet-catalog.png)
+
 ## Desktop Main Page
 
 ![Desktop Main Page](./assets/desktop-main.png)
 
 ## Desktop Catalog Page
 
-![Desktop Main Page](./assets/desktop-catalog.png)
+![Desktop Catalog Page](./assets/desktop-catalog.png)
 
 ![Creating repo from a template step 2](https://www.youtube.com/watch?v=0VKAIe0sths)
 
