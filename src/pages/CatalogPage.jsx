@@ -6,6 +6,8 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import carsOperations from 'redux/cars/carsOperations';
 
+import Loader from 'components/Loader/Loader';
+
 const CatalogPage = () => {
   // getting cars from API
   const dispatch = useDispatch();
@@ -13,6 +15,7 @@ const CatalogPage = () => {
     dispatch(carsOperations.fetchCars());
   }, [dispatch]);
   const cars = useSelector(state => state.cars.items);
+  const showLoader = useSelector(state => state.cars.showLoader);
 
   // page for pagination
   const [page, setPage] = useState(1);
@@ -91,6 +94,7 @@ const CatalogPage = () => {
 
   return (
     <>
+      {showLoader && <Loader />}
       <FilterSidebar
         setSelectedBrand={setSelectedBrand}
         selectedBrand={selectedBrand}
@@ -103,7 +107,7 @@ const CatalogPage = () => {
         handleFilter={handleFilter}
       />
       <CarsBlock cars={carsForShow} />
-      {carsForShow.length === 0 && <NoSearchingResults />}
+      {carsForShow.length === 0 && !showLoader && <NoSearchingResults />}
       {filteredCars.length > page * 8 && <LoadMore setPage={setPage} />}
     </>
   );

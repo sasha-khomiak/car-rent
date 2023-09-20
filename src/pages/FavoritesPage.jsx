@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import carsOperations from 'redux/cars/carsOperations';
 import NoFavorites from 'components/NoFavorites/NoFavorites';
 
+import Loader from 'components/Loader/Loader';
+
 const FavoritesPage = () => {
   // getting cars from API
   const dispatch = useDispatch();
@@ -11,6 +13,7 @@ const FavoritesPage = () => {
     dispatch(carsOperations.fetchCars());
   }, [dispatch]);
   const cars = useSelector(state => state.cars.items);
+  const showLoader = useSelector(state => state.cars.showLoader);
 
   // getting Favorites list
   const favorites = useSelector(state => state.favorites.items);
@@ -21,9 +24,10 @@ const FavoritesPage = () => {
 
   return (
     <>
+      {showLoader && <Loader />}
       {filteredCars.length !== 0 && <CarsBlock cars={filteredCars} />}
 
-      {filteredCars.length === 0 && <NoFavorites />}
+      {filteredCars.length === 0 && !showLoader && <NoFavorites />}
     </>
   );
 };

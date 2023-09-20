@@ -5,7 +5,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import carsOperations from './carsOperations';
 
 // initialState
-const initialState = { items: [] };
+const initialState = { items: [], showLoader: false };
 
 // carsSlice
 const carsSlice = createSlice({
@@ -15,11 +15,13 @@ const carsSlice = createSlice({
     builder
       .addCase(carsOperations.fetchCars.pending, state => {
         // state.isFetchingCurrentUser = true;
+        state.showLoader = true;
       })
       //set Current User fulfilled
       .addCase(carsOperations.fetchCars.fulfilled, (state, action) => {
         // console.log('action', action);
         state.items = action.payload;
+        state.showLoader = false;
         // console.log('state.items', state.items);
         // state.isLoggedIn = true;
         // state.isFetchingCurrentUser = false;
@@ -27,6 +29,7 @@ const carsSlice = createSlice({
       //set Current User rejected
       .addCase(carsOperations.fetchCars.rejected, state => {
         // state.isFetchingCurrentUser = false;
+        state.showLoader = false;
       });
   },
 });
