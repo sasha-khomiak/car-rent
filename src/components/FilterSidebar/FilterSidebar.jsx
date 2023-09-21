@@ -17,6 +17,7 @@ import {
 } from './FilterSidebar.styled';
 
 import brands from './listOfBrands.json';
+import prices from './listOfValues.json';
 
 const FilterSidebar = ({
   setSelectedBrand,
@@ -84,19 +85,9 @@ const FilterSidebar = ({
             onChange={e => setPrice(e.target.value)}
           >
             <MenuItem value="">To $</MenuItem>
-            <MenuItem value={30}>30</MenuItem>
-            <MenuItem value={40}>40</MenuItem>
-            <MenuItem value={50}>50</MenuItem>
-            <MenuItem value={60}>60</MenuItem>
-            <MenuItem value={70}>70</MenuItem>
-            <MenuItem value={80}>80</MenuItem>
-            <MenuItem value={90}>90</MenuItem>
-            <MenuItem value={100}>100</MenuItem>
-            <MenuItem value={150}>150</MenuItem>
-            <MenuItem value={200}>200</MenuItem>
-            <MenuItem value={300}>300</MenuItem>
-            <MenuItem value={400}>400</MenuItem>
-            <MenuItem value={500}>500</MenuItem>
+            {prices.map(item => (
+              <MenuItem value={item}>{item}</MenuItem>
+            ))}
           </Select>
           <FormHelperText>Price</FormHelperText>
         </FormControl>
