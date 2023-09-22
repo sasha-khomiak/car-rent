@@ -13,6 +13,7 @@ import {
 import {
   StyledFilterBlock,
   StyledFilterContainer,
+  StyledBox,
   Button,
 } from './FilterSidebar.styled';
 
@@ -94,7 +95,7 @@ const FilterSidebar = ({
           <FormHelperText>Price</FormHelperText>
         </FormControl>
 
-        <Box component="form" noValidate autoComplete="off">
+        <StyledBox component="form" noValidate autoComplete="off">
           <TextField
             sx={{ m: 1, width: 150 }}
             id="outlined-basic"
@@ -115,7 +116,7 @@ const FilterSidebar = ({
             value={formatedTo}
             onChange={onChangeTo}
           />
-        </Box>
+        </StyledBox>
         <Button type="button" onClick={handleFilter}>
           Search
         </Button>

@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { Box } from '@mui/material';
+
 export const StyledFilterBlock = styled.div`
   /* background-color: green; */
 `;
@@ -61,5 +63,13 @@ export const Button = styled.button`
 
   &:hover {
     background-color: #0b44cd;
+  }
+`;
+
+export const StyledBox = styled(Box)`
+  @media screen and (max-width: 767px) {
+    align-items: center;
+    flex-direction: column;
+    display: flex;
   }
 `;
